@@ -22,13 +22,11 @@ List every file of code or package (folder) and explain what it does or how to u
 
 When needed explain components and their relationship. If needed use diagrams. Here is a simple flow chart:
 
-```example
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
-```
 
 # References
 Add links or documents that new team members must read to follow on your work. For instance:
