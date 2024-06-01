@@ -11,6 +11,12 @@ git add
 git commit
 ```
 
+# Table of Content
+
+List every file of code or package (folder) and explain what it does or how to use it
+
+1. github.com/javiergs/PILART/edit/main/README.md
+
 # References
 Add links or documents that new team members must read to follow on your work. For instance:
 * [GitHub Pages](https://pages.github.com/).
