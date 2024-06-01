@@ -22,8 +22,7 @@ List every file of code or package (folder) and explain what it does or how to u
 
 When needed explain components and their relationship. If needed use diagrams. Here is a simple flow chart:
 
-```
-example
+```example
 graph TD;
     A-->B;
     A-->C;
