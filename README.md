@@ -18,18 +18,6 @@ List every file of code or package (folder) and explain what it does or how to u
 1. [Readme file](github.com/javiergs/PILART/edit/main/README.md)
    
 
-# Architecture
-
-When needed explain components and their relationship. If needed use diagrams. Here is a simple flow chart:
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
 # References
 Add links or documents that new team members must read to follow on your work. For instance:
 * [GitHub Pages](https://pages.github.com/).
