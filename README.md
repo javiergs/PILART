@@ -42,12 +42,9 @@ Highlight important elements that other people should be aware of
 
 
 # References
-\cite{
-@misc{mqtt_getting_started,
-author = {MQTT.org},
-title = {Getting Started with MQTT},
-year = {2024},
-url = {https://mqtt.org/getting-started/},
-note = {Accessed: 2024-06-21}
-}
+
+
+- MQTT.org. (2024). *Getting Started with MQTT*. Retrieved June 21, 2024, from https://mqtt.org/getting-started/
+- 
+
 }
