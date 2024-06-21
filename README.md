@@ -45,6 +45,4 @@ Highlight important elements that other people should be aware of
 
 
 - MQTT.org. (2024). *Getting Started with MQTT*. Retrieved June 21, 2024, from https://mqtt.org/getting-started/
-- 
-
-}
+  
