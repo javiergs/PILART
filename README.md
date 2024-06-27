@@ -1,3 +1,4 @@
+# FIX THIS AS NEEDED
 
 # Personalized Interactive <br>Localization-Adaptive <br>Real-time Toolkit
 
@@ -15,7 +16,8 @@ git commit
 
 List every file of code or package (folder) and explain what it does or how to use it
 
-1. [Readme file](github.com/javiergs/PILART/edit/main/README.md)
+1. [LOCATION-BASED PROJECT WITH GODOT](github.com/javiergs/PILART/edit/main/README-LOCATION-PROJECT.md)
+2. [LABERINTH or MAZE PROJECT WITH GODOT](github.com/javiergs/PILART/edit/main/README-GODOT-PROJECT.md)
 
 # References
 Add links or documents that new team members must read to follow on your work. For instance:
