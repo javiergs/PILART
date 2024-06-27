@@ -1,0 +1,193 @@
+[gd_scene load_steps=7 format=3 uid="uid://kvx6xa13gpoc"]
+
+[ext_resource type="PackedScene" uid="uid://tyxckvpotvp3" path="res://Propts/Tunnel/intersection_tunnel.glb" id="1_leynm"]
+[ext_resource type="PackedScene" uid="uid://dbf4n0lticllo" path="res://Propts/Tunnel/doble_signs_6.glb" id="2_pk28u"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dcr8a"]
+data = PackedVector3Array(2.3929, -0.0007, 1.1793, 0.393, -35.3559, 0.8131, 0.393, -0.0007, 1.1793, 2.3929, -0.0007, 1.1793, 2.3929, -35.3559, 0.8131, 0.393, -35.3559, 0.8131, 2.3929, -35.3559, 0.8131, 0.393, -50, -0.0708, 0.393, -35.3559, 0.8131, 2.3929, -35.3559, 0.8131, 2.3929, -50, -0.0708, 0.393, -50, -0.0708, 2.3929, -50, -0.0708, 0.393, -35.3559, -0.9547, 0.393, -50, -0.0708, 2.3929, -50, -0.0708, 2.3929, -35.3559, -0.9547, 0.393, -35.3559, -0.9547, 2.3929, -0.0007, -1.3208, 0.393, -35.3559, -0.9547, 2.3929, -35.3559, -0.9547, 0.393, -35.3559, -0.9547, 0.393, -0.0007, -1.3208, 0.393, -1.5007, -1.3053, 0.393, -35.3559, -0.9547, 2.3929, -0.0007, -1.3208, 0.393, -0.0007, -1.3208, -0.3538, -0.0007, -1.3102, -0.244, -35.3559, -7.9767, -0.3538, -0.0007, -7.9767, -0.3538, -0.0007, -1.3102, -0.244, -35.3559, -1.3102, -0.244, -35.3559, -7.9767, -0.244, -35.3559, -1.3102, 0.0212, -50, -7.9767, -0.244, -35.3559, -7.9767, -0.244, -35.3559, -1.3102, 0.0212, -50, -1.3102, 0.0212, -50, -7.9767, 0.0212, -50, -1.3102, 0.2863, -35.3559, -7.9767, 0.0212, -50, -7.9767, 0.0212, -50, -1.3102, 0.2863, -35.3559, -1.3102, 0.2863, -35.3559, -7.9767, 0.3915, -1.5007, -1.3102, 0.2863, -35.3559, -7.9767, 0.2863, -35.3559, -1.3102, 0.2863, -35.3559, -7.9767, 0.3962, -0.0007, -1.3102, 0.3962, -0.0007, -7.9767, 0.2863, -35.3559, -7.9767, 0.3915, -1.5007, -1.3102, 0.3962, -0.0007, -1.3102, 0.393, -1.5007, -1.3053, 0.2863, -35.3559, -1.3102, 0.393, -35.3559, -0.9547, 0.393, -1.5007, -1.3053, 0.3915, -1.5007, -1.3102, 0.2863, -35.3559, -1.3102, 0.0212, -50, -1.3102, 0.393, -35.3559, -0.9547, 0.393, -50, -0.0708, 0.0212, -50, -1.3102, 0.2863, -35.3559, -1.3102, 0.393, -35.3559, -0.9547, -1.9622, -0.0007, 4.7728, -0.4704, -35.3559, 0.3178, -0.548, -0.0007, 0.0588, -1.9622, -0.0007, 4.7728, -1.8846, -35.3559, 5.0317, -0.4704, -35.3559, 0.3178, -1.8846, -35.3559, 5.0317, -0.2829, -50, 0.9427, -0.4704, -35.3559, 0.3178, -1.8846, -35.3559, 5.0317, -1.6971, -50, 5.6566, -0.2829, -50, 0.9427, -1.6971, -50, 5.6566, -0.0954, -35.3559, 1.5678, -0.2829, -50, 0.9427, -1.6971, -50, 5.6566, -1.5096, -35.3559, 6.2818, -0.0954, -35.3559, 1.5678, -1.5096, -35.3559, 6.2818, -0.0177, -0.0007, 1.8265, -0.0954, -35.3559, 1.5678, -1.5096, -35.3559, 6.2818, -1.4319, 0, 6.5407, -0.0177, -0.0007, 1.8265, 0.393, -35.3559, 0.8131, -0.0177, -0.0007, 1.8265, 0.393, -0.0007, 1.1793, 0.393, -35.3559, 0.8131, -0.0954, -35.3559, 1.5678, -0.0177, -0.0007, 1.8265, 0.393, -50, -0.0708, -0.0954, -35.3559, 1.5678, 0.393, -35.3559, 0.8131, 0.393, -50, -0.0708, -0.2829, -50, 0.9427, -0.0954, -35.3559, 1.5678, 0.393, -50, -0.0708, -0.2829, -50, 0.9427, 0.0212, -50, -1.3102, -0.244, -35.3559, -1.3102, -0.2829, -50, 0.9427, 0.0212, -50, -1.3102, -0.244, -35.3559, -1.3102, -0.4704, -35.3559, 0.3178, -0.2829, -50, 0.9427, -0.3538, -0.0007, -1.3102, -0.4704, -35.3559, 0.3178, -0.244, -35.3559, -1.3102, -0.3538, -0.0007, -1.3102, -0.548, -0.0007, 0.0588, -0.4704, -35.3559, 0.3178)
+backface_collision = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uhbpr"]
+size = Vector3(6, 1, 18)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_gu468"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_opggb"]
+size = Vector2(30, 0.2)
+
+[node name="intersection_tunnel" instance=ExtResource("1_leynm")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="Road" parent="." index="0"]
+transform = Transform3D(7.07107, 1.14582e-08, 2.12132, 8.74228e-07, -0.1, 2.2386e-07, 7.07107, 9.05288e-10, -2.12132, 0, 0, 0)
+
+[node name="Border" parent="." index="1"]
+transform = Transform3D(7.07107, 1.14582e-08, 2.12132, 8.74228e-07, -0.1, 2.2386e-07, 7.07107, 9.05288e-10, -2.12132, 0, 0, 0)
+
+[node name="Top" parent="." index="2"]
+transform = Transform3D(7.07107, 1.14582e-08, 2.12132, 8.74228e-07, -0.1, 2.2386e-07, 7.07107, 9.05288e-10, -2.12132, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Top" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Top/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_dcr8a")
+
+[node name="Area3D_left" type="Area3D" parent="." index="3"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 9.617, 1, 9.899)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_left" index="0"]
+shape = SubResource("BoxShape3D_uhbpr")
+
+[node name="Area3D_right" type="Area3D" parent="." index="4"]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -9.617, 1, 9.899)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_right" index="0"]
+shape = SubResource("BoxShape3D_uhbpr")
+
+[node name="Area3D_center" type="Area3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0175016, 1, -14.1005)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_center" index="0"]
+shape = SubResource("BoxShape3D_uhbpr")
+
+[node name="doble_signs_der" parent="." index="6" instance=ExtResource("2_pk28u")]
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, -3.43513, 0, -1.51866)
+
+[node name="right_signs" type="Node3D" parent="doble_signs_der" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4064, 0, -4.47736)
+
+[node name="Label3D1" type="Label3D" parent="doble_signs_der/right_signs" index="0"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 2.8, 4.4)
+font_size = 40
+
+[node name="Label3D2" type="Label3D" parent="doble_signs_der/right_signs" index="1"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 2.2, 4.4)
+font_size = 40
+
+[node name="Label3D3" type="Label3D" parent="doble_signs_der/right_signs" index="2"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 1.65047, 4.4)
+font_size = 40
+
+[node name="left_signs" type="Node3D" parent="doble_signs_der" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00639898, 0, -4.47736)
+
+[node name="Label3D1" type="Label3D" parent="doble_signs_der/left_signs" index="0"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 2.8, 4.4)
+font_size = 40
+
+[node name="Label3D2" type="Label3D" parent="doble_signs_der/left_signs" index="1"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 2.2, 4.4)
+font_size = 40
+
+[node name="Label3D3" type="Label3D" parent="doble_signs_der/left_signs" index="2"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.699999, 1.64376, 4.4)
+font_size = 40
+
+[node name="doble_signs_med" parent="." index="7" instance=ExtResource("2_pk28u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08878, 0, 4.63659)
+
+[node name="right_signs" type="Node3D" parent="doble_signs_med" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4064, 0, -4.47736)
+
+[node name="Label3D1" type="Label3D" parent="doble_signs_med/right_signs" index="0"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 2.8, 4.4)
+font_size = 40
+
+[node name="Label3D2" type="Label3D" parent="doble_signs_med/right_signs" index="1"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 2.2, 4.4)
+font_size = 40
+
+[node name="Label3D3" type="Label3D" parent="doble_signs_med/right_signs" index="2"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 1.65047, 4.4)
+font_size = 40
+
+[node name="left_signs" type="Node3D" parent="doble_signs_med" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00639898, 0, -4.47736)
+
+[node name="Label3D1" type="Label3D" parent="doble_signs_med/left_signs" index="0"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 2.8, 4.4)
+font_size = 40
+
+[node name="Label3D2" type="Label3D" parent="doble_signs_med/left_signs" index="1"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 2.2, 4.4)
+font_size = 40
+
+[node name="Label3D3" type="Label3D" parent="doble_signs_med/left_signs" index="2"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.699999, 1.64376, 4.4)
+font_size = 40
+
+[node name="doble_signs_izq" parent="." index="8" instance=ExtResource("2_pk28u")]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 3.55863, 0, -0.867229)
+
+[node name="right_signs" type="Node3D" parent="doble_signs_izq" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4064, 0, -4.47736)
+
+[node name="Label3D1" type="Label3D" parent="doble_signs_izq/right_signs" index="0"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 2.8, 4.4)
+font_size = 40
+
+[node name="Label3D2" type="Label3D" parent="doble_signs_izq/right_signs" index="1"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 2.2, 4.4)
+font_size = 40
+
+[node name="Label3D3" type="Label3D" parent="doble_signs_izq/right_signs" index="2"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 1.65047, 4.4)
+font_size = 40
+
+[node name="left_signs" type="Node3D" parent="doble_signs_izq" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00639898, 0, -4.47736)
+
+[node name="Label3D1" type="Label3D" parent="doble_signs_izq/left_signs" index="0"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 2.8, 4.4)
+font_size = 40
+
+[node name="Label3D2" type="Label3D" parent="doble_signs_izq/left_signs" index="1"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.7, 2.2, 4.4)
+font_size = 40
+
+[node name="Label3D3" type="Label3D" parent="doble_signs_izq/left_signs" index="2"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.699999, 1.64376, 4.4)
+font_size = 40
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="9"]
+transform = Transform3D(0.522244, -7.81597e-14, 0.606769, -5.31359e-08, 1, 5.71084e-08, -0.526409, 1.42109e-14, 1.30321, -8.92323, 0.149934, 9.07591)
+material_override = SubResource("ORMMaterial3D_gu468")
+mesh = SubResource("PlaneMesh_opggb")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="10"]
+transform = Transform3D(-0.526409, -7.81597e-14, 1.3032, -5.3136e-08, 1, 5.71085e-08, -0.522244, 1.42109e-14, -0.606769, 8.76632, 0.149934, 9.05966)
+material_override = SubResource("ORMMaterial3D_gu468")
+mesh = SubResource("PlaneMesh_opggb")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." index="11"]
+transform = Transform3D(-0.0029448, -7.81597e-14, 1.35056, -5.3136e-08, 1, 5.71085e-08, -0.74151, 1.42109e-14, 0.492455, 0.0434377, 0.149932, -12.7234)
+material_override = SubResource("ORMMaterial3D_gu468")
+mesh = SubResource("PlaneMesh_opggb")
+
+[node name="nombre_interseccion" type="Label3D" parent="." index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.1, 0)
+visible = false
+pixel_size = 0.3
+billboard = 1
+text = "TEXT"
+
+[node name="izquierda" type="Label3D" parent="." index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4, 34.3, -6.2)
+visible = false
+pixel_size = 0.15
+billboard = 1
+text = "TEXT"
+
+[node name="derecha" type="Label3D" parent="." index="14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4, 34.3, -7.05)
+visible = false
+pixel_size = 0.15
+billboard = 1
+text = "TEXT"
+
+[node name="medio" type="Label3D" parent="." index="15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.150001, 34.3, 5.95)
+visible = false
+pixel_size = 0.15
+billboard = 1
+text = "TEXT"

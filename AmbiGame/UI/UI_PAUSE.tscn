@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bveo6rqmktfxy"]
+
+[ext_resource type="PackedScene" uid="uid://c8obg1n1ud002" path="res://UI/menu_pausa_2.tscn" id="1_bptap"]
+[ext_resource type="Script" path="res://UI/UI_PAUSE.gd" id="1_w6il2"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_w6il2")
+
+[node name="MenuPausa2" parent="." instance=ExtResource("1_bptap")]
+visible = false

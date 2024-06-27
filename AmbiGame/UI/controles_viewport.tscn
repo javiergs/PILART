@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://2ljc81wo1y84"]
+
+[ext_resource type="FontFile" uid="uid://ci0mf1ehsgqdv" path="res://UI/fonts/game_over.ttf" id="1_ohao0"]
+[ext_resource type="Script" path="res://UI/Controles_pantalla.gd" id="1_qggtj"]
+
+[node name="Controles_viewport" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 225.0
+offset_top = 66.0
+offset_right = 937.0
+offset_bottom = 110.0
+script = ExtResource("1_qggtj")
+
+[node name="avanzar" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = -401.0
+offset_top = -6.0
+offset_right = 301.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("1_ohao0")
+theme_override_font_sizes/font_size = 100
+text = "PRESIONA EL GATILLO DERECHO PARA AVANZAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="frenar" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = -401.0
+offset_top = -10.0
+offset_right = 301.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("1_ohao0")
+theme_override_font_sizes/font_size = 100
+text = "PRESIONA EL GATILLO IZQUIERDO PARA FRENAR
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="volante" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = -389.0
+offset_top = -8.0
+offset_right = 313.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("1_ohao0")
+theme_override_font_sizes/font_size = 100
+text = "MANTEN LOS GATILLOS LATERALES PARA CONDUCIR
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="movimiento" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = -416.0
+offset_top = -10.0
+offset_right = 286.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("1_ohao0")
+theme_override_font_sizes/font_size = 100
+text = "UTILIZA EL STICK IZQUIERDO PARA MOVERTE
+"
+horizontal_alignment = 1
+vertical_alignment = 1

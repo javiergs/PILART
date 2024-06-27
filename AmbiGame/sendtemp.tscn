@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dus7nkhrn7pik"]
+
+[sub_resource type="SystemFont" id="SystemFont_g306t"]
+font_names = PackedStringArray("Century Gothic")
+
+[node name="Label" type="Label"]
+layout_mode = 0
+offset_left = -83.0
+offset_top = 87.0
+offset_right = 217.0
+offset_bottom = 131.0
+theme_override_fonts/font = SubResource("SystemFont_g306t")
+theme_override_font_sizes/font_size = 35
+text = "Tu objetivo es: "
+horizontal_alignment = 1
+vertical_alignment = 1

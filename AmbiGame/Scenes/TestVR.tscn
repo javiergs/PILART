@@ -1,0 +1,78 @@
+[gd_scene load_steps=13 format=3 uid="uid://b2u2auig8ic5n"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_b4jly"]
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="2_donbf"]
+[ext_resource type="PackedScene" uid="uid://bx1xdisoqo1f6" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_tac_glove_low.tscn" id="3_4jh7h"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="4_txemt"]
+[ext_resource type="PackedScene" uid="uid://chumpejwiub7f" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_tac_glove_low.tscn" id="4_yx8wl"]
+[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="5_ufcsb"]
+[ext_resource type="Script" path="res://addons/godot-xr-tools/player/player_body.gd" id="6_ah7e3"]
+[ext_resource type="PackedScene" uid="uid://ce7vysyvondf8" path="res://addons/godot-xr-tools/objects/snap_zone.tscn" id="8_mokwa"]
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="11_iksjj"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bufpa"]
+size = Vector2(10, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_66vrw"]
+size = Vector3(9.77463, 0.571167, 9.78656)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_exbgv"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_b4jly")
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="VRCommonShaderCache" parent="XROrigin3D/XRCamera3D" instance=ExtResource("2_donbf")]
+
+[node name="XRController3D" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+
+[node name="LeftHand" parent="XROrigin3D/XRController3D" instance=ExtResource("3_4jh7h")]
+
+[node name="MovementDirect" parent="XROrigin3D/XRController3D" instance=ExtResource("4_txemt")]
+
+[node name="FunctionPickup" parent="XROrigin3D/XRController3D" instance=ExtResource("5_ufcsb")]
+
+[node name="XRController3D2" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+
+[node name="RightHand" parent="XROrigin3D/XRController3D2" instance=ExtResource("4_yx8wl")]
+
+[node name="FunctionPickup" parent="XROrigin3D/XRController3D2" instance=ExtResource("5_ufcsb")]
+
+[node name="XRToolsPlayerBody" type="CharacterBody3D" parent="XROrigin3D"]
+top_level = true
+collision_layer = 524289
+collision_mask = 1023
+script = ExtResource("6_ah7e3")
+player_radius = 0.4
+player_height_min = 1.0
+player_height_max = 2.2
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("PlaneMesh_bufpa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00797957, -0.214417, -0.00961304)
+shape = SubResource("BoxShape3D_66vrw")
+
+[node name="SnapZone" parent="Floor" instance=ExtResource("8_mokwa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.309294, -0.6494)
+snap_require = "Box"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.480956, -2.06577)
+shape = SubResource("BoxShape3D_exbgv")
+
+[node name="PickableObject" parent="." instance=ExtResource("11_iksjj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13404, -1.83425)

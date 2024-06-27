@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cuyigtwagcfkw"]
+
+[node name="Real Time Collaboration" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 274.0
+offset_bottom = 360.0
+text = "Click me"

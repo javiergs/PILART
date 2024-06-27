@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://2ljc81wo1y84"]
+
+[ext_resource type="FontFile" uid="uid://ci0mf1ehsgqdv" path="res://UI/fonts/game_over.ttf" id="1_ohao0"]
+[ext_resource type="Script" path="res://UI/Controles_pantalla.gd" id="1_qggtj"]
+
+[node name="Controles_viewport" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 225.0
+offset_top = 66.0
+offset_right = 937.0
+offset_bottom = 110.0
+script = ExtResource("1_qggtj")
+
+[node name="avanzar" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = -309.0
+offset_top = -6.0
+offset_right = 393.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("1_ohao0")
+theme_override_font_sizes/font_size = 45
+text = "PRESIONA EL GATILLO DERECHO PARA AVANZAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="frenar" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = -309.0
+offset_top = 7.0
+offset_right = 393.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("1_ohao0")
+theme_override_font_sizes/font_size = 45
+text = "PRESIONA EL GATILLO IZQUIERDO PARA FRENAR
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="volante" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = -297.0
+offset_top = 23.0
+offset_right = 405.0
+offset_bottom = 62.0
+theme_override_fonts/font = ExtResource("1_ohao0")
+theme_override_font_sizes/font_size = 45
+text = "MANTEN LOS GATILLOS LATERALES PARA CONDUCIR
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="movimiento" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = -325.0
+offset_top = 42.0
+offset_right = 377.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("1_ohao0")
+theme_override_font_sizes/font_size = 45
+text = "UTILIZA EL STICK IZQUIERDO PARA MOVERTE
+"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=3 uid="uid://ck5loi7sbd4cq"]
+
+[ext_resource type="Script" path="res://addons/realtimecollaboration/mainscreen/main_screen.gd" id="1_q27m7"]
+
+[node name="MainScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_q27m7")
+
+[node name="ButtonTest" type="Button" parent="."]
+layout_mode = 2
+offset_left = 485.0
+offset_top = 233.0
+offset_right = 563.0
+offset_bottom = 264.0
+text = "Equals"
+
+[node name="ButtonHostCreate" type="Button" parent="."]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 341.0
+offset_right = 281.0
+offset_bottom = 406.0
+text = "Host create"
+
+[node name="ButtonHostStop" type="Button" parent="."]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 340.0
+offset_right = 442.0
+offset_bottom = 405.0
+text = "Host stop"
+
+[node name="ButtonJoinClient" type="Button" parent="."]
+layout_mode = 0
+offset_left = 725.0
+offset_top = 345.0
+offset_right = 845.0
+offset_bottom = 410.0
+text = "Join client"
+
+[node name="ButtonViewClients" type="Button" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 250.0
+offset_right = 292.0
+offset_bottom = 301.0
+text = "View clients
+"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 161.0
+offset_right = 463.0
+offset_bottom = 210.0
+text = "Test"
+
+[node name="ButtonTest2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 174.0
+offset_right = 295.0
+offset_bottom = 212.0
+text = "Test2"
+
+[connection signal="pressed" from="ButtonTest" to="." method="_on_button_test_pressed"]
+[connection signal="pressed" from="ButtonHostCreate" to="." method="_on_button_host_create_pressed"]
+[connection signal="pressed" from="ButtonHostStop" to="." method="_on_button_host_stop_pressed"]
+[connection signal="pressed" from="ButtonJoinClient" to="." method="_on_button_join_client_pressed"]
+[connection signal="pressed" from="ButtonViewClients" to="." method="_on_button_view_clients_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ButtonTest2" to="." method="_on_button_test_2_pressed"]
