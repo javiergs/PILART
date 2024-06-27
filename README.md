@@ -16,7 +16,7 @@ git commit
 
 List every file of code or package (folder) and explain what it does or how to use it
 
-1. [LOCATION-BASED PROJECT WITH GODOT](github.com/javiergs/PILART/edit/main/README-LOCATION-PROJECT.md)
+1. [LOCATION-BASED PROJECT WITH GODOT](README-LOCALTION-PROJECT.md)
 2. [LABERINTH or MAZE PROJECT WITH GODOT](README-GODOT-PROJECT.md)
 
 # References
