@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://5iev5huue3wd"]
+
+[ext_resource type="PackedScene" uid="uid://brgffxsl1qfuo" path="res://Propts/tuneles_tscn/road_tunnel_up_doble.tscn" id="1_ya5db"]
+
+[node name="ramp" type="Node3D"]
+
+[node name="road_tunnel" parent="." instance=ExtResource("1_ya5db")]
+transform = Transform3D(0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0, 2, -20.3772, 1.64395, 0.759919)
+
+[node name="road_tunnel2" parent="." instance=ExtResource("1_ya5db")]
+transform = Transform3D(0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0, 2, 19.4706, 5.13018, 0.759919)

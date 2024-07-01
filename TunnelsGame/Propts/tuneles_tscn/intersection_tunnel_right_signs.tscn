@@ -1,0 +1,109 @@
+[gd_scene load_steps=5 format=3 uid="uid://u13yiayji37j"]
+
+[ext_resource type="PackedScene" uid="uid://tyxckvpotvp3" path="res://Propts/Tunnel/intersection_tunnel.glb" id="1_kgdj5"]
+[ext_resource type="PackedScene" uid="uid://dnxqh0geys6yb" path="res://Propts/Tunnel/doble_sign.glb" id="2_6grej"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_82nxa"]
+data = PackedVector3Array(2.3929, -0.0007, 1.1793, 0.393, -35.3559, 0.8131, 0.393, -0.0007, 1.1793, 2.3929, -0.0007, 1.1793, 2.3929, -35.3559, 0.8131, 0.393, -35.3559, 0.8131, 2.3929, -35.3559, 0.8131, 0.393, -50, -0.0708, 0.393, -35.3559, 0.8131, 2.3929, -35.3559, 0.8131, 2.3929, -50, -0.0708, 0.393, -50, -0.0708, 2.3929, -50, -0.0708, 0.393, -35.3559, -0.9547, 0.393, -50, -0.0708, 2.3929, -50, -0.0708, 2.3929, -35.3559, -0.9547, 0.393, -35.3559, -0.9547, 2.3929, -0.0007, -1.3208, 0.393, -35.3559, -0.9547, 2.3929, -35.3559, -0.9547, 0.393, -35.3559, -0.9547, 0.393, -0.0007, -1.3208, 0.393, -1.5007, -1.3053, 0.393, -35.3559, -0.9547, 2.3929, -0.0007, -1.3208, 0.393, -0.0007, -1.3208, -0.3538, -0.0007, -1.3102, -0.244, -35.3559, -7.9767, -0.3538, -0.0007, -7.9767, -0.3538, -0.0007, -1.3102, -0.244, -35.3559, -1.3102, -0.244, -35.3559, -7.9767, -0.244, -35.3559, -1.3102, 0.0212, -50, -7.9767, -0.244, -35.3559, -7.9767, -0.244, -35.3559, -1.3102, 0.0212, -50, -1.3102, 0.0212, -50, -7.9767, 0.0212, -50, -1.3102, 0.2863, -35.3559, -7.9767, 0.0212, -50, -7.9767, 0.0212, -50, -1.3102, 0.2863, -35.3559, -1.3102, 0.2863, -35.3559, -7.9767, 0.3915, -1.5007, -1.3102, 0.2863, -35.3559, -7.9767, 0.2863, -35.3559, -1.3102, 0.2863, -35.3559, -7.9767, 0.3962, -0.0007, -1.3102, 0.3962, -0.0007, -7.9767, 0.2863, -35.3559, -7.9767, 0.3915, -1.5007, -1.3102, 0.3962, -0.0007, -1.3102, 0.393, -1.5007, -1.3053, 0.2863, -35.3559, -1.3102, 0.393, -35.3559, -0.9547, 0.393, -1.5007, -1.3053, 0.3915, -1.5007, -1.3102, 0.2863, -35.3559, -1.3102, 0.0212, -50, -1.3102, 0.393, -35.3559, -0.9547, 0.393, -50, -0.0708, 0.0212, -50, -1.3102, 0.2863, -35.3559, -1.3102, 0.393, -35.3559, -0.9547, -1.9622, -0.0007, 4.7728, -0.4704, -35.3559, 0.3178, -0.548, -0.0007, 0.0588, -1.9622, -0.0007, 4.7728, -1.8846, -35.3559, 5.0317, -0.4704, -35.3559, 0.3178, -1.8846, -35.3559, 5.0317, -0.2829, -50, 0.9427, -0.4704, -35.3559, 0.3178, -1.8846, -35.3559, 5.0317, -1.6971, -50, 5.6566, -0.2829, -50, 0.9427, -1.6971, -50, 5.6566, -0.0954, -35.3559, 1.5678, -0.2829, -50, 0.9427, -1.6971, -50, 5.6566, -1.5096, -35.3559, 6.2818, -0.0954, -35.3559, 1.5678, -1.5096, -35.3559, 6.2818, -0.0177, -0.0007, 1.8265, -0.0954, -35.3559, 1.5678, -1.5096, -35.3559, 6.2818, -1.4319, 0, 6.5407, -0.0177, -0.0007, 1.8265, 0.393, -35.3559, 0.8131, -0.0177, -0.0007, 1.8265, 0.393, -0.0007, 1.1793, 0.393, -35.3559, 0.8131, -0.0954, -35.3559, 1.5678, -0.0177, -0.0007, 1.8265, 0.393, -50, -0.0708, -0.0954, -35.3559, 1.5678, 0.393, -35.3559, 0.8131, 0.393, -50, -0.0708, -0.2829, -50, 0.9427, -0.0954, -35.3559, 1.5678, 0.393, -50, -0.0708, -0.2829, -50, 0.9427, 0.0212, -50, -1.3102, -0.244, -35.3559, -1.3102, -0.2829, -50, 0.9427, 0.0212, -50, -1.3102, -0.244, -35.3559, -1.3102, -0.4704, -35.3559, 0.3178, -0.2829, -50, 0.9427, -0.3538, -0.0007, -1.3102, -0.4704, -35.3559, 0.3178, -0.244, -35.3559, -1.3102, -0.3538, -0.0007, -1.3102, -0.548, -0.0007, 0.0588, -0.4704, -35.3559, 0.3178)
+backface_collision = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uhbpr"]
+size = Vector3(6, 1, 18)
+
+[node name="intersection_tunnel" instance=ExtResource("1_kgdj5")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Top" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Top/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_82nxa")
+
+[node name="Area3D_left" type="Area3D" parent="." index="3"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 9.617, 1, 9.899)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_left" index="0"]
+shape = SubResource("BoxShape3D_uhbpr")
+
+[node name="Area3D_right" type="Area3D" parent="." index="4"]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -9.617, 1, 9.899)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_right" index="0"]
+shape = SubResource("BoxShape3D_uhbpr")
+
+[node name="Area3D_center" type="Area3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0175016, 1, -14.1005)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_center" index="0"]
+shape = SubResource("BoxShape3D_uhbpr")
+
+[node name="doble_sign" parent="." index="6" instance=ExtResource("2_6grej")]
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, -3.50536, 0, -0.939106)
+
+[node name="right_signs" type="Node3D" parent="doble_sign" index="17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4064, 0, -4.47736)
+
+[node name="Label3D" type="Label3D" parent="doble_sign/right_signs" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 2.9, 4.4)
+font_size = 24
+
+[node name="Label3D2" type="Label3D" parent="doble_sign/right_signs" index="1"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 2.6, 4.4)
+font_size = 24
+
+[node name="Label3D3" type="Label3D" parent="doble_sign/right_signs" index="2"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 2.3, 4.4)
+font_size = 24
+
+[node name="Label3D4" type="Label3D" parent="doble_sign/right_signs" index="3"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 2, 4.4)
+font_size = 24
+
+[node name="Label3D5" type="Label3D" parent="doble_sign/right_signs" index="4"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 1.7, 4.4)
+font_size = 24
+
+[node name="Label3D6" type="Label3D" parent="doble_sign/right_signs" index="5"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 1.4, 4.4)
+font_size = 24
+
+[node name="Label3D7" type="Label3D" parent="doble_sign/right_signs" index="6"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 1.1, 4.4)
+font_size = 24
+
+[node name="Label3D8" type="Label3D" parent="doble_sign/right_signs" index="7"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 0.8, 4.4)
+font_size = 24
+
+[node name="left_signs" type="Node3D" parent="doble_sign" index="18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00639898, 0, -4.47736)
+
+[node name="Label3D" type="Label3D" parent="doble_sign/left_signs" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 2.9, 4.4)
+font_size = 24
+
+[node name="Label3D2" type="Label3D" parent="doble_sign/left_signs" index="1"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 2.6, 4.4)
+font_size = 24
+
+[node name="Label3D3" type="Label3D" parent="doble_sign/left_signs" index="2"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 2.3, 4.4)
+font_size = 24
+
+[node name="Label3D4" type="Label3D" parent="doble_sign/left_signs" index="3"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 2, 4.4)
+font_size = 24
+
+[node name="Label3D5" type="Label3D" parent="doble_sign/left_signs" index="4"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 1.7, 4.4)
+font_size = 24
+
+[node name="Label3D6" type="Label3D" parent="doble_sign/left_signs" index="5"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 1.4, 4.4)
+font_size = 24
+
+[node name="Label3D7" type="Label3D" parent="doble_sign/left_signs" index="6"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 1.1, 4.4)
+font_size = 24
+
+[node name="Label3D8" type="Label3D" parent="doble_sign/left_signs" index="7"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 0.8, 4.4)
+font_size = 24

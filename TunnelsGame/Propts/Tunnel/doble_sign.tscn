@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6fbh57ybblcb"]
+
+[ext_resource type="PackedScene" uid="uid://dnxqh0geys6yb" path="res://Propts/Tunnel/doble_sign.glb" id="1_tsuoo"]
+
+[node name="doble_sign" instance=ExtResource("1_tsuoo")]
+
+[node name="Plane_020" parent="." index="4"]
+visible = false
+
+[node name="Plane_021" parent="." index="5"]
+visible = false
+
+[node name="Plane_022" parent="." index="6"]
+visible = false
+
+[node name="Plane_023" parent="." index="7"]
+visible = false
+
+[node name="Plane_024" parent="." index="9"]
+visible = false
+
+[node name="Plane_025" parent="." index="10"]
+visible = false
+
+[node name="Plane_026" parent="." index="11"]
+visible = false
+
+[node name="Plane_027" parent="." index="12"]
+visible = false

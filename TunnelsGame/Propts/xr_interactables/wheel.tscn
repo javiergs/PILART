@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://bou3jthi7fnki"]
+
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/interactables/interactable_hinge.tscn" id="1_8csxm"]
+[ext_resource type="Texture2D" uid="uid://bblvduu2f4aw" path="res://imgs/white_grid.png" id="2_aaa1s"]
+[ext_resource type="PackedScene" uid="uid://bddj5m7ull6g0" path="res://addons/godot-xr-tools/interactables/interactable_handle.tscn" id="2_da0mb"]
+[ext_resource type="PackedScene" uid="uid://da2qgxxwwitl6" path="res://addons/godot-xr-tools/objects/highlight/highlight_ring.tscn" id="4_wy6hk"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_js451"]
+albedo_texture = ExtResource("2_aaa1s")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_mg3xb"]
+material = SubResource("ORMMaterial3D_js451")
+top_radius = 0.2
+bottom_radius = 0.2
+height = 0.02
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l7jg8"]
+points = PackedVector3Array(0.0380654, 0.0122222, 0.203175, -0.0380654, -0.0131746, -0.203175, -0.0634821, -0.0131746, -0.19681, 0.0634821, -0.0131746, 0.19681, 0.19681, 0.0122222, -0.0634821, -0.203175, 0.0122222, -0.0380654, -0.177758, -0.0131746, 0.107912, 0.203175, -0.0131746, 0.0380654, -0.0380654, 0.0122222, -0.203175, 0.126964, -0.0131746, -0.165069, -0.126964, 0.0122222, 0.165069, 0.165069, 0.0122222, 0.126964, -0.177758, -0.0131746, -0.107912, 0.0825347, 0.0122222, -0.190446, -0.0634821, -0.0131746, 0.19681, -0.126964, 0.0122222, -0.165069, 0.190446, -0.0131746, -0.0825347, -0.190446, 0.0122222, 0.0825347, -0.203175, -0.0131746, 0.0380654, 0.126964, -0.0131746, 0.165069, 0.165069, 0.0122222, -0.126964, 0.203175, 0.0122222, 0.0380654, 0.0380654, -0.0131746, -0.203175, -0.0380654, 0.0122222, 0.203175, 0.107912, 0.0122222, 0.177758, 0.177758, -0.0131746, 0.107912, -0.177758, 0.0122222, -0.107912, -0.126964, -0.0131746, -0.165069, -0.126964, -0.0131746, 0.165069, -0.203175, -0.0131746, -0.0380654, 0.203175, -0.0131746, -0.0380654, -0.0380654, -0.0131746, 0.203175)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j66um"]
+size = Vector3(0.02, 0.08, 0.1)
+
+[node name="Wheel" type="Node3D"]
+
+[node name="HingeOrigin" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, -0.00349065, -0.999994, 0, 0.999994, -0.00349065, 1, -1.52581e-10, -4.37111e-08, 0, 0, 0)
+
+[node name="InteractableHinge" parent="HingeOrigin" instance=ExtResource("1_8csxm")]
+hinge_limit_min = -90.0
+hinge_limit_max = 90.0
+
+[node name="WheelBody3D" type="StaticBody3D" parent="HingeOrigin/InteractableHinge"]
+
+[node name="WheelMesh" type="MeshInstance3D" parent="HingeOrigin/InteractableHinge/WheelBody3D"]
+transform = Transform3D(-0.000580914, 0.999999, -0.000281794, -1, -0.000580868, 0.000151907, 0.000151729, 0.000281889, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_mg3xb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/WheelBody3D"]
+transform = Transform3D(-0.000580914, 0.999999, -0.000281794, -0.999999, -0.000580868, 0.000151907, 0.000151729, 0.000281889, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_l7jg8")
+
+[node name="Handle3" type="Node3D" parent="HingeOrigin/InteractableHinge"]
+transform = Transform3D(0.999999, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.2)
+
+[node name="InteractableHandle" parent="HingeOrigin/InteractableHinge/Handle3" instance=ExtResource("2_da0mb")]
+snap_distance = 0.1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle3/InteractableHandle"]
+transform = Transform3D(1, 0, -2.77556e-17, 3.55271e-15, 1, -6.66941e-18, 0, -6.66941e-18, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_j66um")
+
+[node name="HighlightRing" parent="HingeOrigin/InteractableHinge/Handle3/InteractableHandle" instance=ExtResource("4_wy6hk")]
+
+[node name="Handle4" type="Node3D" parent="HingeOrigin/InteractableHinge"]
+transform = Transform3D(0.999999, -7.10543e-15, 1.38778e-17, -1.38778e-17, -4.35393e-08, 1, -3.55271e-15, -1, -4.35393e-08, 1.77636e-15, -5.82077e-11, 0.2)
+
+[node name="InteractableHandle" parent="HingeOrigin/InteractableHinge/Handle4" instance=ExtResource("2_da0mb")]
+snap_distance = 0.1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle4/InteractableHandle"]
+transform = Transform3D(1, 0, -2.77556e-17, 3.55271e-15, 1, -6.66941e-18, 0, -6.66941e-18, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_j66um")
+
+[node name="HighlightRing" parent="HingeOrigin/InteractableHinge/Handle4/InteractableHandle" instance=ExtResource("4_wy6hk")]

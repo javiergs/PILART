@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://dgme3n35q8xb8"]
+
+[ext_resource type="Texture2D" uid="uid://baa2124hnb00v" path="res://Propts/Tunnel/road_tunnel_Road texture.jpg" id="1_fcde6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_24osg"]
+albedo_texture = ExtResource("1_fcde6")
+
+[sub_resource type="BoxMesh" id="BoxMesh_q6fq4"]
+material = SubResource("StandardMaterial3D_24osg")
+size = Vector3(10, 1, 650)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uvdlr"]
+points = PackedVector3Array(5, 0.5, 325, 5, -0.5, 325, 5, 0.5, -325, -5, 0.5, 325, -5, -0.5, 325, 5, -0.5, -325, -5, 0.5, -325, -5, -0.5, -325)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_twmcf"]
+size = Vector3(1, 6, 650)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_7t3qv"]
+albedo_color = Color(0.466667, 0.466667, 0.466667, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xurof"]
+material = SubResource("ORMMaterial3D_7t3qv")
+size = Vector3(1, 2, 650)
+
+[node name="Carretera_interior_salida" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_q6fq4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_uvdlr")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2, 2.9, 0)
+shape = SubResource("BoxShape3D_twmcf")
+
+[node name="barrera1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.75, 0)
+mesh = SubResource("BoxMesh_xurof")
+skeleton = NodePath("../MeshInstance3D")

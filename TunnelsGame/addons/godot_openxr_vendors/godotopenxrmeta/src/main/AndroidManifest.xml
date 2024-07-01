@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature
+        android:name="android.hardware.vr.headtracking"
+        android:required="true"
+        android:version="1"/>
+
+    <application>
+        <meta-data
+            android:name="org.godotengine.plugin.v2.GodotOpenXRMeta"
+            android:value="org.godotengine.openxr.vendors.meta.GodotOpenXRMeta" />
+
+        <meta-data
+            android:name="com.oculus.supportedDevices"
+            android:value="quest2|questpro|quest3" />
+
+        <meta-data
+            android:name="com.oculus.vr.focusaware"
+            android:value="true" />
+    </application>
+
+</manifest>
