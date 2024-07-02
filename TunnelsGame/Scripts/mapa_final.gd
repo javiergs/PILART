@@ -24,7 +24,7 @@ func _city_area_detection(id):
 	print("Entered " + id)
 	Global.last_city = id
 	
-	if id == Global.objective_level:
+	if id == Global.level_objective:
 		Global.won = true
 		_load_next_level()
 		correct_targets += 1
@@ -51,7 +51,7 @@ func _load_level(result, response_code, headers, body):
 	#Change signs and initiate directions
 	print("Current level " + str(Global.current_level_number))
 	Global.start_level = response.niveles[str(Global.current_level_number)]['inicia:'] 
-	Global.objective_level = response.niveles[str(Global.current_level_number)]['objetivo']
+	Global.level_objective = response.niveles[str(Global.current_level_number)]['objetivo']
 	
 	cities_to_num = {}
 	#Load the city names and link their respective 3D areas
@@ -79,6 +79,9 @@ func _load_level(result, response_code, headers, body):
 		
 	print("Map updated correctly")
 	
+	if (Global.current_level_number > 1): 
+		$Textbox._print_message("Good job, you passed the level! Your next goal is: " + Global.level_objective)
+		$Textboc/UIPausa/Label/Label.text = "Your next goal is: " + Global.level_objective
 	#Repositioning the vehicle to the starting area after restarting
 	$player_car.set_global_position(get_node("Ciudades/Ciudad_" + str(cities_to_num[Global.start_level]) + "/Iniciador").get_global_position())
 	#Reset the car's speed to zero

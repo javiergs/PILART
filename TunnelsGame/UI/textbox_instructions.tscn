@@ -214,6 +214,6 @@ text = "Tu puntuacion es de: "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="UIPausa/CenterContainer/VBoxContainer/Reanudar_Button" to="." method="_on_reanudar_button_pressed"]
-[connection signal="pressed" from="UIPausa/CenterContainer/VBoxContainer/Reiniciar_Button" to="." method="_on_reiniciar_button_pressed"]
-[connection signal="pressed" from="UIPausa/CenterContainer/VBoxContainer/Terminar_Button" to="." method="_on_terminar_button_pressed"]
+[connection signal="pressed" from="UIPausa/CenterContainer/VBoxContainer/Reanudar_Button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="UIPausa/CenterContainer/VBoxContainer/Reiniciar_Button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="UIPausa/CenterContainer/VBoxContainer/Terminar_Button" to="." method="_on_exit_button_pressed"]

@@ -25,20 +25,20 @@ var current_char = 0
 var char_timer = 0.0
 var is_text_displayed = false 
 
-func mostrar_texto_inicio():
-	_agregar_mensaje("Welcome, in this virtual experience you need to reach an objective city")
+func print_start_message():
+	_print_message("Welcome, in this virtual experience you need to reach an objective city")
 	await get_tree().create_timer(10).timeout 
-	_agregar_mensaje("Your first objective is: " + Global.objective_level)
-	$UIPausa/Label/Label.text = $UIPausa/Label/Label.text + Global.objective_level
+	_print_message("Your first objective is: " + Global.level_objective)
+	$UIPausa/Label/Label.text = $UIPausa/Label/Label.text + Global.level_objective
 	await get_tree().create_timer(6).timeout 
-	_agregar_mensaje("You can pause the experience by pressing the B button")
+	_print_message("You can pause the experience by pressing the B button")
 	await get_tree().create_timer(10).timeout 
-	_agregar_mensaje("In the pause menu you can see your current objective, reset your car if you get stuck, or, leave the game")
+	_print_message("In the pause menu you can see your current objective, reset your car if you get stuck, or, leave the game")
 	
 func _ready():
 	#await get_tree().create_timer(5).timeout
 	textbox_container.visible = true
-	mostrar_texto_inicio()
+	print_start_message()
 	
 func queue_text(next_text):
 	text_queue.push_back(next_text)
@@ -100,8 +100,8 @@ func deteccion():
 	if Global.won == true:
 		Global.won = false
 		await get_tree().create_timer(3).timeout 
-		_agregar_mensaje("Muy bien pasaste de nivel, ahora dirígete hacia: " + Global.objective_level)
-		_agregar_mensaje("Muy bien pasaste de nivel, ahora dirígete hacia: " + Global.objective_level)
+		_print_message("Muy bien pasaste de nivel, ahora dirígete hacia: " + Global.level_objective)
+		_print_message("Muy bien pasaste de nivel, ahora dirígete hacia: " + Global.level_objective)
 		change_state(State.READY)
 		
 
@@ -109,17 +109,17 @@ func change_state(next_state):
 	Global.current_state = next_state
 	match Global.current_state:
 		State.READY:
-			print("Cambiando estado a: State.READY")
+			print("State changed to: State.READY")
 		State.READING:
-			print("Cambiando estado a: State.READING")
+			print("State changed to: State.READING")
 		State.FINISHED:
-			print("Cambiando estado a: State.FINISHED")
+			print("State changed to: State.FINISHED")
 		State.INACTIVE:
-			print("Cambiando estado a: State.INACTIVE")
+			print("State changed to: State.INACTIVE")
 
 
-func _agregar_mensaje(mensaje):
-	queue_text(mensaje + "                ")
+func _print_message(message):
+	queue_text(message + "                ")
 	display_text()
 	
 	
@@ -130,18 +130,22 @@ func set_is_paused():
 	if Global.is_paused == true:
 		$UIPausa.show()
 
-func _on_reanudar_button_pressed():
+
+func _on_resume_button_pressed():
 	Global.is_paused = false
 	$UIPausa.hide()
 
-func _on_reiniciar_button_pressed():
+
+func _on_restart_button_pressed():
 	Global.restart = true
 	$UIPausa.hide()
+	Global.is_paused = false
 
-func _on_terminar_button_pressed():
+
+func _on_exit_button_pressed():
 	$UIPausa.hide()
-	_agregar_mensaje("Calculando...")
+	Global.is_paused = false
+	_print_message("Calculating...")
 	await get_tree().create_timer(3).timeout
 	$UIFinal.show()
 	$UIFinal/Tolerancia.text = $UIFinal/Tolerancia.text + str(Global.tolerance)
-

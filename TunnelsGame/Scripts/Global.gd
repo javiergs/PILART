@@ -3,7 +3,7 @@ extends Node
 #var cronometro_scene = preload("../UI/cronometro.tscn")
 #var cronometro = null 
 
-var objective_level : String
+var level_objective : String
 var start_level : String
 var last_city : String
 var current_level_number = 1
