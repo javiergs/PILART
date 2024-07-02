@@ -1,11 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
 android/
-addons/godotopenxrvendors/
+addons/godot_openxr_vendors/
 addons/godot-xr-tools/
-project.godot
 project
-project.godot
 receivetemp
 sendtemp
 receivetemp.txt
