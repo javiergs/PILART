@@ -26,14 +26,18 @@ func _city_area_detection(id):
 	
 	if id == Global.level_objective:
 		Global.won = true
-		_load_next_level()
-		correct_targets += 1
-		_calculate_tolerance_ambiguity()
+		#_load_next_level()
+		#correct_targets += 1
+		#_calculate_tolerance_ambiguity()
+		Global.won = false
+		#print("TUT ENDED")
+		get_tree().change_scene_to_file("res://Scenes/prototipo_mapa_final_normal.tscn")
 	else:
 		incorrect_targets += 1		
 		_calculate_tolerance_ambiguity()
 
 func _load_level(result, response_code, headers, body):
+	'''
 	var json = JSON.new()
 	var response
 	#Obtains the json of the map, via http and in case of error by local file
@@ -47,21 +51,23 @@ func _load_level(result, response_code, headers, body):
 		print("Read through http")
 		json.parse(body.get_string_from_utf8())
 		response = json.get_data()
-	
+	'''
+	Global.last_city = Global.start_level
 	#Change signs and initiate directions
 	print("Current level " + str(Global.current_level_number))
-	Global.start_level = response.niveles[str(Global.current_level_number)]['inicia:'] 
-	Global.level_objective = response.niveles[str(Global.current_level_number)]['objetivo']
+	Global.start_level = "Troya" #response.niveles[str(Global.current_level_number)]['inicia:'] 
+	Global.level_objective = "Lima" #response.niveles[str(Global.current_level_number)]['objetivo']
 	
-	cities_to_num = {}
+	cities_to_num = {"York" : "1", "Lima" : "2", "Troya" : "3"}
+	var tutorial_cities = ["York", "Lima", "Troya"]
 	#Load the city names and link their respective 3D areas
-	for i in range(1,13):	
-		cities_to_num[response.ciudades[str(i)]] = str(i)
-		get_node("Ciudades/Ciudad_" + str(i) + "/LowPolyCITY/Letrero_aereo/Label3D").text = response.ciudades[str(i)]
-		get_node("Ciudades/Ciudad_" + str(i) + "/LowPolyCITY/Area3D").body_entered.connect(func(body):_city_area_detection(response.ciudades[str(i)]))
+	for i in range(1,3):	
+		cities_to_num[tutorial_cities[i - 1]] = str(i)
+		get_node("Ciudades/Ciudad_" + str(i) + "/LowPolyCITY/Letrero_aereo/Label3D").text = tutorial_cities[i - 1]
+		get_node("Ciudades/Ciudad_" + str(i) + "/LowPolyCITY/Area3D").body_entered.connect(func(body):_city_area_detection(tutorial_cities[i - 1]))
 		#Recorre los letreros
 		
-	
+	'''
 	for intersection in range(1,14):	
 		get_node("Tunnels/intersection_tunnel"+str(intersection)+"/Area3D_left").body_entered.connect(_intersection_area)
 		get_node("Tunnels/intersection_tunnel"+str(intersection)+"/Area3D_right").body_entered.connect(_intersection_area)
@@ -76,11 +82,12 @@ func _load_level(result, response_code, headers, body):
 			#Right sign
 			get_node("Tunnels/intersection_tunnel"+str(intersection)+"/doble_signs_med/left_signs/Label3D"+str(sign)).text = response.niveles[str(Global.current_level_number)]["intersecciones"][str(intersection)]["seniales_med"]["izquierda"][str(sign)]
 			get_node("Tunnels/intersection_tunnel"+str(intersection)+"/doble_signs_med/right_signs/Label3D"+str(sign)).text = response.niveles[str(Global.current_level_number)]["intersecciones"][str(intersection)]["seniales_med"]["derecha"][str(sign)]
-	
+	'''
 	print("Map updated correctly")
 	
 	#Repositioning the vehicle to the starting area after restarting
 	$player_car.set_global_position(get_node("Ciudades/Ciudad_" + str(cities_to_num[Global.start_level]) + "/Iniciador").get_global_position())
+	print("car position: " + str($player_car.get_global_position()))
 	
 	#Reset the car's speed to zero
 	var car = $player_car as VehicleBody3D
@@ -88,7 +95,8 @@ func _load_level(result, response_code, headers, body):
 	$player_car.set_global_rotation(Vector3(0, 0, 0))
 	
 	if (Global.current_level_number > 1): 
-		$Textbox._print_message("Good job, you passed the level! Your next goal is: " + Global.level_objective)
+		$Textbox._print_message("Tutorial!")
+		#$Textbox._print_message("Good job, you passed the level! Your next goal is: " + Global.level_objective)
 		#$Textboc/UIPausa/Label/Label.text = "Your next goal is: " + Global.level_objective
 	
 func _intersection_area(body):
