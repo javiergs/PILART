@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://dus7nkhrn7pik"]
-
-[node name="vialidad_exterior" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 132.1, 0)
-visible = false

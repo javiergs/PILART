@@ -1,7 +1,0 @@
-/api/
-/_build/
-.env
-__pycache__
-*.pyc
-/.vscode/
-/python.env/
