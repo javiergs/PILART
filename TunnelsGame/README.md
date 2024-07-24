@@ -1,7 +1,50 @@
-# TUNNELS GAME
+#  _TUNNELS GAME_
 
-# Files Needed
+# Table Of Contents
 
+1. [Godot File Types](https://github.com/javiergs/PILART/edit/main/TunnelsGame/README.md#godot-file-types)
+2. [Project File Explanation](https://github.com/javiergs/PILART/edit/main/TunnelsGame/README.md#project-file-explanations)
+3. [Set Up](https://github.com/javiergs/PILART/blob/main/TunnelsGame/README.md#set-up)
+
+# Godot File Types
+There are three file types in the godot editor. [***Scenes***](https://github.com/javiergs/PILART/edit/main/TunnelsGame/README.md#scenes) and [***Scripts***](https://github.com/javiergs/PILART/edit/main/TunnelsGame/README.md#scripts)
+
+### Scenes
+
+Scenes are the visual 3D models in godot used to design things that will be seen by a user and are the files that end with .tscn. 
+
+A scene is made up of:
+- Nodes: Can be seen as a folder of other 3D objects which can contain scenes of their own
+- Bodies: The physical body of a player, possible enemies, or other objects
+- Mesh Instance: The visual surrounding a body
+- Canvas Layer: Similar to an overlay on the screen with no physical properities in the game other than clickable buttons
+
+>[!TIP]
+>![image](https://github.com/user-attachments/assets/fbf733ee-8555-4a39-9a4a-b80882c70e66)
+>
+>This is what the game scene looks like, it is comprised different level nodes containing cities and tunnels which each have their own scenes, a canvas layer named "textbox" which controls pop up instructions and the pause menu, and a player body for what the user will control. 
+
+>[!NOTE]
+>In this project, all the scenes are contained in the "Scenes" folder with normal_view_map and vr_map being the primary scenes
+
+
+### Scripts
+
+Scripts are the attached code files that run the behavior of their respective node and are the files that end with .gd. 
+
+In a script there are two special godot functions that are automatically called: 
+- _ready(): runs once when the game starts
+- _process(): runs whenever the frame changes 
+
+>[!TIP]
+>Scipts are written with a syntax similar to python
+
+# Project File Explanations
+
+
+# Set up
+
+## Needed Resources
 To begin using the tunnels game, download the following:
 
 1. [Godot Game Engine](https://godotengine.org/)
@@ -9,7 +52,7 @@ To begin using the tunnels game, download the following:
 3. [Tunnels Game code](https://github.com/javiergs/PILART/tree/main/TunnelsGame)
 4. [Godot XR tools](https://github.com/GodotVR/godot-xr-tools)
 
-# Set up
+
 Follow the instructions below to set up and run the Tunnels game (tips with pictures on what to look for down below)
 ...
 
@@ -45,8 +88,10 @@ Follow the instructions below to set up and run the Tunnels game (tips with pict
 >![image](https://github.com/javiergs/PILART/assets/113921844/7f0609ea-89cc-45d9-9ba7-e117754b643e)
 
 
+
 > [!TIP]
 > If there are any errors when first opening the project, simply press "Reload Current Project" under the "Project" tab in the top left.
 
 > [!TIP]
 > When looking for your blender folder, my path was C:/Program Files/Blender Foundation/Blender 4.1, yours may be similar.
+
