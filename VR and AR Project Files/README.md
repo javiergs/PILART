@@ -29,7 +29,7 @@ The Video Player is a Spatially Anchored plane that can be spawned on any surfac
 The video can be paused and played using the right ray interactor.
 
 ### Controls and Bindings
-Left Top Trigger - Place Video Player
-Left Bottom Trigger - Force Grab Objects
-Right Top Trigger - Play/Pause Video Player
-Right Bottom Trigger - Shoot Blocks
+Left Top Trigger - Place Video Player |
+Left Bottom Trigger - Force Grab Objects |
+Right Top Trigger - Play/Pause Video Player |
+Right Bottom Trigger - Shoot Blocks |
