@@ -114,3 +114,14 @@ Follow the instructions below to set up and run the Tunnels game (tips with pict
 > [!TIP]
 > When looking for your blender folder, my path was C:/Program Files/Blender Foundation/Blender 4.1, yours may be similar.
 
+
+# Level Configuration
+
+## Level Building Blocks
+1. City Node
+2. Ramp
+3. Intersection
+4. Straight Tunnel
+    - Closed Variant Available
+5. Curved Tunnel
+    - Closed Variant Available
