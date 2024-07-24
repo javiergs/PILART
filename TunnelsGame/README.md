@@ -40,7 +40,26 @@ In a script there are two special godot functions that are automatically called:
 >Scipts are written with a syntax similar to python
 
 # Project File Explanations
-
+- normal_view_map.tscn
+    - The overall map scene of the game containing everything seen in the game
+- player_car_normal.tscn
+    - The car the user is controlling in the game
+- textbox_instructions.tscn
+    - The textbox and pause menu graphics
+- textbox_instructions.gd
+    - Controls the instructions and pause menu
+- map_data.json
+    - the data to configure a level that controls:
+        - starting city
+        - ending city
+        - intersection sign names
+        - city names
+- low_poly_city.gd
+    - code to keep track of when a player enters a city to know when the game ends
+- car.gd
+    - code to allow the player to control the car
+- Global.gd
+    - Global variables for the game
 
 # Set up
 
