@@ -5,6 +5,7 @@
 1. [Godot File Types](https://github.com/javiergs/PILART/edit/main/TunnelsGame/README.md#godot-file-types)
 2. [Project File Explanation](https://github.com/javiergs/PILART/edit/main/TunnelsGame/README.md#project-file-explanations)
 3. [Set Up](https://github.com/javiergs/PILART/blob/main/TunnelsGame/README.md#set-up)
+4. [Level Configuration](https://github.com/javiergs/PILART/edit/main/TunnelsGame/README.md#level-configuration)
 
 # Godot File Types
 There are three file types in the godot editor. [***Scenes***](https://github.com/javiergs/PILART/edit/main/TunnelsGame/README.md#scenes) and [***Scripts***](https://github.com/javiergs/PILART/edit/main/TunnelsGame/README.md#scripts)
@@ -140,8 +141,14 @@ Follow the instructions below to set up and run the Tunnels game (tips with pict
 ![image](https://github.com/user-attachments/assets/1cab3757-b193-455d-875a-71c17adedb09)
 
 
-To create a new level, you must first switch to the 3D tab, on the top of the screen, to see the physical level setup. The easiest way to create a new level is to copy and paste a 3D level node to duplicate it then using the four left options to alter the level. 
+To create a new level, you must first switch to the 3D tab, on the top of the screen, to see the physical level setup. The easiest way to create a new level is to make all the levels visible by clicking the closed eye icons on the left side of the screen. You should then right click a level node you like the layout of on the left side and duplicate it, then to alter the level using the four left options. 
 
+>[!IMPORTANT]
+> When viewing the 3D scene, you can zoom in and out by scrolling, look around with the persective cube in the top right or holding down right click and looking around with your mouse, and you can also move around the 3D space by hitting SHIFT + F to enter freelook mode.
+>
+> In freelook mode, you can change the speed of your movement by scrolling up or down, move around with the WASD keys, and look around freely with your mouse. To exit this mode you simply need to press SHIFT + F once more or right clicking on your mouse.
+>
+> Also with the perspective cube, you can click on an axis and you can see a 2D view of the scene facing in that direction. You would move aroud by holding right click and dragging, and zooming in and out like normal and freelook will be disabled in this view. To exit this view, simiply click and roate the perspective cube. 
 
 Starting from the cursor icon:
 1. The cursor icon is the select option, to choose which nodes you want to edit since the node names are too similar to know which one you are editing.
@@ -232,3 +239,6 @@ Next, you should open the map_data.json file to add your levels data to correctl
 ```
 >[!IMPORTANT]
 > If the direction sign names are left as "", this will leave that sign blank. Therefore there should be exact a list of 1 - 3, if a sign is not being used simply make its city name an empty string to avoid invalid level loading
+>
+
+Lastly, make every level other than level_0 invisible so only the level you're currently on is visible to the player and you have successfully created your own level!
