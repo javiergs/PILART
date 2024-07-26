@@ -2,13 +2,13 @@
 
 # Table Of Contents
 
-1. [Godot File Types](https://github.com/javiergs/PILART/edit/main/TunnelsGame/README.md#godot-file-types)
-2. [Project File Explanation](https://github.com/javiergs/PILART/edit/main/TunnelsGame/README.md#project-file-explanations)
-3. [Set Up](https://github.com/javiergs/PILART/blob/main/TunnelsGame/README.md#set-up)
-4. [Level Configuration](https://github.com/javiergs/PILART/edit/main/TunnelsGame/README.md#level-configuration)
+1. [Godot File Types](https://github.com/javiergs/PILART/tree/main/TunnelsGame#godot-file-types)
+2. [Project File Explanation](https://github.com/javiergs/PILART/tree/main/TunnelsGame#project-file-explanations)
+3. [Set Up](https://github.com/javiergs/PILART/tree/main/TunnelsGame#set-up)
+4. [Level Configuration](https://github.com/javiergs/PILART/tree/main/TunnelsGame#level-configuration)
 
 # Godot File Types
-There are three file types in the godot editor. [***Scenes***](https://github.com/javiergs/PILART/edit/main/TunnelsGame/README.md#scenes) and [***Scripts***](https://github.com/javiergs/PILART/edit/main/TunnelsGame/README.md#scripts)
+There are three file types in the godot editor. ***Scenes*** and ***Scripts***
 
 ### Scenes
 
