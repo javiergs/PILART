@@ -118,10 +118,117 @@ Follow the instructions below to set up and run the Tunnels game (tips with pict
 # Level Configuration
 
 ## Level Building Blocks
-1. City Node
+1. City Nodes: Different Cities
+    - The roads surrounding the city node can be customized with three different roads to move:
+        - The Corner road
+        - The city exit: place where you want to create a connection to a tunnel
+        - Regular Road: place/transform between different exits to be able to reach them
 2. Ramp
+   - A ramp is how the user can reach the tunnels from the city, since the city nodes are above the tunnels
 3. Intersection
+    - Location where the tunnels can split
+    - In the intersection there are signs that can be written on within the map data json file.
 4. Straight Tunnel
     - Closed Variant Available
 5. Curved Tunnel
     - Closed Variant Available
+  
+
+
+
+## Building A 3D Level
+![image](https://github.com/user-attachments/assets/1cab3757-b193-455d-875a-71c17adedb09)
+
+
+To create a new level, you must first switch to the 3D tab, on the top of the screen, to see the physical level setup. The easiest way to create a new level is to copy and paste a 3D level node to duplicate it then using the four left options to alter the level. 
+
+
+Starting from the cursor icon:
+1. The cursor icon is the select option, to choose which nodes you want to edit since the node names are too similar to know which one you are editing.
+>[!TIP]
+>The next options all have directional options with:
+> - Green: Z-Axis
+> - Red: Y-Axis
+> - Blue: X-Axis 
+>
+>![image](https://github.com/user-attachments/assets/86ca9953-7625-4bf2-8808-f26809796ae3)
+>
+> By holding the middle of the node and dragging, you can move the node freely in each direction
+>
+> By holding an arrow, you will move **only** in the direction of the respective arrows color
+>
+> By holding a square, you will be able to move in every direction **other than** the direction of the sqaures color
+
+2. The four arrows indicate the move option, where you can translate the node
+3. Next to that is the rotate option
+4. Lastly, the scale option to make the node bigger
+
+>[!TIP]
+>When selecting a node to move it, make sure you click the top node group to move the entire object, otherwise some rendering mistakes may occur
+
+>[!NOTE]
+>When you need to add new nodes if you copy and paste the node you need to add, godot will automatically add a number to the end of that nodes name, which should continue the pattern to keep the code running
+well. If it does not, make sure all the city and intersection nodes have the same naming pattern
+
+You can add new nodes from dragging them into the 3D area from the file system in the bottom left or copy and paste them like described above, however, you must make sure they are under the correct level node. 
+
+## Adding Level Data
+After configuring your level in the 3D model, you must go into the script tab and change the max levels on line 183 in the map_behavior.gd file so the level can run 
+
+Next, you should open the map_data.json file to add your levels data to correctly label the city's and intersection signs. The data should be input in this format for each level: 
+
+```
+
+"[LEVEL NUMBER]": {
+    "start": "[SPAWING CITY NAME]",
+    "goal": "[GOAL CITY NAME]",
+    "cities": {
+        "[CITY NODE NUMBER]": "[CITY NAME]",
+        "2" : "Troya",
+        ...
+    },
+    "intersections": {
+        "[INTERSECTION NUMBER]": {
+            "left_sign": {
+                "left": {
+        			"1": "[CITY NAME]",
+    				"2": "[CITY NAME]",
+    				"3": "[CITY NAME]"
+    			},
+            	"right": {
+    				"1": "[CITY NAME]",
+                    "2": "[CITY NAME]",
+            		"3": "[CITY NAME]"
+    			}
+            },
+            "right_sign": {
+                "left": {
+        			"1": "[CITY NAME]",
+            		"2": "[CITY NAME]",
+                	"3": "[CITY NAME]"
+                },
+                "right": {
+                    "1": "[CITY NAME]",
+                	"2": "[CITY NAME]",
+                    "3": "[CITY NAME]"
+                }
+            },
+            "middle_sign": {
+                "left": {
+            		"1": "[CITY NAME]",
+        			"2": "[CITY NAME]",
+            		"3": "[CITY NAME]"
+                },
+                "right": {
+        			"1": "[CITY NAME]",
+            		"2": "[CITY NAME]",
+                	"3": "[CITY NAME]"
+            	}
+            }
+        }
+    }
+},
+
+```
+>[!IMPORTANT]
+> If the direction sign names are left as "", this will leave that sign blank. Therefore there should be exact a list of 1 - 3, if a sign is not being used simply make its city name an empty string to avoid invalid level loading
