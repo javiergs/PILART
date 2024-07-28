@@ -90,7 +90,7 @@ Follow the instructions below to set up and run the Tunnels game (tips with pict
     12. Finally, press the play button on the top right corner to preview the game
 ...
 >[!IMPORTANT]
->If the VR experience is wanted, search for the "prototipo_mapa_final.tscn" file in the godot filesystem in the bottom left, right click and "Set as Main Scene" before pressing play
+>If the VR experience is wanted, search for the "vr_view_map.tscn" file in the godot filesystem in the bottom left, right click and "Set as Main Scene" before pressing play
 
 >[!TIP]
 >Step 2 button:
