@@ -18,6 +18,7 @@ List every file of code or package (folder) and explain what it does or how to u
 
 1. [LOCATION-BASED PROJECT WITH GODOT](README-LOCALTION-PROJECT.md)
 2. [LABERINTH or MAZE PROJECT WITH GODOT](README-GODOT-PROJECT.md)
+3. [AUGMENTED REALITY APPS]([url](https://github.com/javiergs/PILART/tree/main/VR%20and%20AR%20Project%20Files))
 
 # References
 Add links or documents that new team members must read to follow on your work. For instance:
