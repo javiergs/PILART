@@ -34,7 +34,8 @@ Left Bottom Trigger - Force Grab Objects <br/>
 Right Top Trigger - Play/Pause Video Player <br/>
 Right Bottom Trigger - Shoot Blocks
 
-## Documentation/Timeline of Work
-[SURP Overview]([url](https://docs.google.com/document/d/16f_o1X2NrhacGVFAV2vseqfDpp6lOkFRui4BquvREY4/edit?usp=sharing))
+## Learning and Project Documentation
 [Augmented Reality Learning]([url](https://docs.google.com/document/d/1lSMP8arB5uru4-At-8WbLQpiR-VjMdZmdBnzxvODu0s/edit?usp=sharing))
+[SURP Overview]([url](https://docs.google.com/document/d/16f_o1X2NrhacGVFAV2vseqfDpp6lOkFRui4BquvREY4/edit?usp=sharing))
+.
 
