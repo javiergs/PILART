@@ -11,7 +11,7 @@ up until a recent update.
 1. Go to Quick Settings -> Settings -> Physical Space -> Space Setup
 2. Click "Set Up" and the headset will guide you through that process
 
-## Overview of AR Project
+## Overview of OpenXR AR Project
 ### Plane Detection
 If you have done the Space Setup for your headset, the Plane Detection I have built will create a "virtual room" that mirrors the one you are 
 currently in. A virtual plane will be built to the dimensions and orientation of all surfaces detected in your Space Setup, meaning you can 
@@ -33,6 +33,15 @@ Left Top Trigger - Place Video Player <br/>
 Left Bottom Trigger - Force Grab Objects <br/>
 Right Top Trigger - Play/Pause Video Player <br/>
 Right Bottom Trigger - Shoot Blocks
+
+## Overview of Meta All-In-One Scene Understanding Project
+Not yet finished, will add details and project link once it's done.
+
+## Overview of Hand Location Tracking and Exporting Project
+### Hand Tracking
+The actual hand tracking is mostly handled through the hand tracking building block which adds all necessary components to the project. I wrote a script that is attached to the hand objects, in which hand location is determined by accessing the transform of the OVRHand component. This data is split into its x and y components, with which I can then classify hand location into one of four positional quadrants in relation to the headset (hand in upper right, lower left, etc.). I can change the format of the hand location data depending on what is needed from the SURP robot development team. I can make 8 quadrants that could classify the hand location in 3 dimensions, or I could stream the live xyz coordinates via WebSocket if the robot requires accuracy.
+### WebSocket Data Streaming
+I wrote a JavaScript program that creates a WebSocket Server on my computer which can open/close a WebSocket connection and handle incoming messages from a WebSocket Client. In the hand tracking script within Unity, I wrote code to initialize the headset as a WebSocket Client and send the hand's positional quadrant once per frame to be printed in the Terminal via the Web Socket Server. The destination of the WebSocket Server, and how the information is dealt with once received from the client can be altered within the JavaScript file.
 
 ## Learning and Project Documentation
 [Augmented Reality Learning](https://docs.google.com/document/d/1lSMP8arB5uru4-At-8WbLQpiR-VjMdZmdBnzxvODu0s/edit?usp=sharing)
