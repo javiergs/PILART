@@ -38,6 +38,8 @@ Right Bottom Trigger - Shoot Blocks
 Not yet finished, will add details and project link once it's done.
 
 ## Overview of Hand Location Tracking and Exporting Project
+### WebSockets 101
+A WebSocket enables live, 2-way communication between a "Client" (headset) and a "Server" (computer/robot). A "Handshake" is performed to open the connection, and messages can be sent freely until the connection is manually closed by the Client or Server.
 ### Hand Tracking
 The actual hand tracking is mostly handled through the hand tracking building block which adds all necessary components to the project. I wrote a script that is attached to the hand objects, in which hand location is determined by accessing the transform of the OVRHand component. This data is split into its x and y components, with which I can then classify hand location into one of four positional quadrants in relation to the headset (hand in upper right, lower left, etc.). I can change the format of the hand location data depending on what is needed from the SURP robot development team. I can make 8 quadrants that could classify the hand location in 3 dimensions, or I could stream the live xyz coordinates via WebSocket if the robot requires accuracy.
 ### WebSocket Data Streaming
