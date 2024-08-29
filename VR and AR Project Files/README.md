@@ -12,6 +12,7 @@ up until a recent update.
 2. Click "Set Up" and the headset will guide you through that process
 
 ## Overview of OpenXR AR Project
+*Has Ray Interaction*
 ### Plane Detection
 If you have done the Space Setup for your headset, the Plane Detection I have built will create a "virtual room" that mirrors the one you are 
 currently in. A virtual plane will be built to the dimensions and orientation of all surfaces detected in your Space Setup, meaning you can 
@@ -35,7 +36,9 @@ Right Top Trigger - Play/Pause Video Player <br/>
 Right Bottom Trigger - Shoot Blocks
 
 ## Overview of Meta All-In-One Scene Understanding Project
-Not yet finished, will add details and project link once it's done.
+*Has Ray Interaction*
+### Scene Understanding
+Scene Understanding is a general term that describes the more in depth and practical construction of an XR scene provided by Meta's XR SDK's. By making every element (walls, furniture, objects, hands, head, eyes, etc.) an anchor, every aspect of the scene is easier to access, modify, and build. Most of this functionality comes from the Mixed Reality Utility Kit (MRUK) and its accompanying tools (see my AR Learning doc for more info). The most important of these tools are the MRUK, Effect Mesh, and Anchor Prefab Spawner. The MRUK and Effect Mesh handle the construction of the scene, the anchors and meshes that make up the room, and most physics or raycasting features. The Anchor Prefab Spawner allows you to replace any anchor in the room with a prefab, allowing you to overlay real world objects with virtual ones and much more. Although it is a little less practical, this is the closest we will get to Object Detection and overlay on the Quest 2.
 
 ## Overview of Hand Location Tracking and Exporting Project
 ### WebSockets 101
